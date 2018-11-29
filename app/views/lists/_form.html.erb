@@ -11,16 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+
+  
+<!-- cards novos -->
+<div class="card border-primary mb-3" style="max-width: 30rem;">
+  <div class="card-header">List</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">My List</h5>
+    <p class="card-text"><div class="field">
+
+    <div class="field">
 <%= f.label :name %><br>
 <%= f.text_field :name %>
 </div>
-
-<div class="field">
+    
+    <div class="field">
 <%= f.label :description %><br>
 <%= f.text_field :description %>
 </div>
-<div class="field">
+
+<br>
 <%= f.label :purchase %><br>
 <%= f.check_box :purchase %>
 </div>
@@ -29,14 +40,15 @@
   <%= render "product_fields", f: builder %>
 <% end %>
 </div>
-<p><%= link_to_add_fields "Add Product", f, :products %></p>
+<p class="btn btn-light btn"><%= link_to_add_fields "Add Product", f, :products  %></p></p>
+  </div>
 
 
 
 
 
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions"  >
+    <%= f.submit 'Submit List',class:"btn btn-dark btn-block" %>
   </div>
 <% end %>

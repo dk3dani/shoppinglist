@@ -1,27 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p> <strong> Name:</strong>
-<%= @list.name%>
-</p>
-<p> <strong> description:</strong>
-<%= @list.description %>
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <strong> Name:</strong>
+            <%= @list.name%></li>
+    <li class="list-group-item"><strong> Description:</strong>
+            <%= @list.description %></li>
+    <li class="list-group-item"><strong> Purchase:</strong>
+            <%= @list.purchase %></li>
+  </ul>
+</div>
 
-</p>
-<p> <strong> purchase:</strong>
-<%= @list.purchase %> </p>
-<table>
+<table class="table table-bordered" style="width: 18rem;">
 <tr>
+<th>#</th>
 <th> Product</th>
+
 </tr>
 <tr>
 <% @list.products.each do |product| %>
 <tr>
-<th><%= product.name%><th>
+<th><%= product.id %></th>
+<th><%= product.name%> </th>
 </tr>
 <% end%>
 </table>
 
 
 
-<%= link_to 'Edit', edit_user_list_path( @user ,@list) %> |
-<%= link_to 'Back', user_lists_path(@user) %>
+<%= link_to 'Edit', edit_user_list_path( @user ,@list),class:"btn btn-dark btn" %> 
+<%= link_to 'Back', user_lists_path(@user), class:"btn btn-danger btn" %>

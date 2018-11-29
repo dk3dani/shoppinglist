@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @user.bio %>
-</p>
-<%= link_to 'Lists', user_lists_path(@user) %> |
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <strong>Name:</strong>  <%= @user.name %></li>
+    <li class="list-group-item"><strong>Age:</strong>  <%= @user.age %></li>
+    <li class="list-group-item"><strong>Bio:</strong>  <%= @user.bio %></li>
+  </ul>
+</div>
+<div>
+<%= link_to 'Lists', user_lists_path(@user),class:"btn btn-success btn" %> 
+<%= link_to 'Edit', edit_user_path(@user),class:"btn btn-dark btn" %> 
+<%= link_to 'Back', users_path ,class:"btn btn-danger btn" %>
+</div>

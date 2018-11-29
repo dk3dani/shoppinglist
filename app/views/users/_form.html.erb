@@ -11,7 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!--Cards novos-->
+<div class="card border-primary mb-3" style="max-width: 20rem;">
+  <div class="card-header">User</div>
+  <div class="card-body text-primary">
+    
+    <p class="card-text">
+    
+    <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -23,7 +30,19 @@
     <%= f.label :bio %><br>
     <%= f.text_area :bio %>
   </div>
+    
+    
+    
+    
+    
+    
+    </p>
+  </div>
+
+
+
+  
   <div class="actions">
-    <%= f.submit %>
+       <%= f.submit 'Submit User',class:"btn btn-dark btn-block" %>
   </div>
 <% end %>
